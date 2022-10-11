@@ -1,2 +1,2 @@
 # Portfolio-site
- A Minimalistic showcase of Projects
+ A Minimalistic Website for Skills & Projects.
