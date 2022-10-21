@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>J. Robert Oppenheimer</title>
+  <title>Portfolio | Deepak Gupta</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,40 +11,46 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@600;700&family=Pacifico&family=Passions+Conflict&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    
+    <div class="nav_container">
     <div id="nav">
         <div id="logo_container"> <h1>DEEPAK GUPTA</h1><p>Front-end | Animator</p> </div>
-        <div id="nav_links_container"><div>WORK</div><div>ABOUT</div></div>
-    </div>
+        <div id="nav_links_container"><div id="nlinks">WORK</div><div id="nlinks">ABOUT</div>
+            <div class="darkMode_btn" id="darkmodeBtn" onclick="DayNightSwitch()"><img src="vector/final/moon.png" class="MoonSun" id="MoonSunID"></div>
+        </div>
+        </div></div>
     
     <div id="main-box">
     
         <div id="box">
         
-            <div id="item_container">
-                <div id="item_box">
+            
+            <div id="item_container" href="https://www.w3schools.com" target="_blank">
+                <div id="item_box" class="item_box item_1" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;">
                 <div id="item_content" style="background-image: url(items/rock_paper_scissor.jpg)">
-                    <div> <h2>Rock Paper Scissor</h2><p>RPS Game with multiple inputs & Outputs</p><div>HTML, CSS, JAVASCRIPT</div></div>
+                    <div id="item_discription" class="item_discription item_disc_1"> <h2>Game: Rock Paper Scissor</h2><p>RPS Game with multiple inputs & Outputs</p><div>HTML, CSS, JAVASCRIPT</div></div>
                     </div>
+                </div>   
                 </div>
-                
-            </div>
          
-             <div id="item_container">
-                <div id="item_box">
-                <div id="item_content" style="background-image: url(items/rock_paper_scissor.jpg)">
-                    <div> <h2>Rock Paper Scissor</h2><p>RPS Game with multiple inputs & Outputs</p><div>HTML, CSS, JAVASCRIPT</div></div>
+             <div id="item_container" >
+                <div id="item_box item_box_2" class="item_box item_2" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;">
+                <div id="item_content" style="background-image: url(items/Oppenheimer.jpg)">
+                    <div id="item_discription" class="item_discription item_disc_2"> <h2>Blog: J. Robert Oppenheimer</h2><p>Highly stylized blog dedicated to Oppenheimer.</p><div>HTML, CSS, JAVASCRIPT</div></div>
                     </div>
                 </div>
-                
             </div>
+
+            
         </div>
         
     </div>
-    
+    <script src="script.js"></script>
     </body>
 </html>
