@@ -15,13 +15,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@600;700&family=Pacifico&family=Passions+Conflict&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="vector/Font/stylesheet.css" type="text/css" charset="utf-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
 </head>
 <body>
     <div class="nav_container">
     <div id="nav">
         <div id="logo_container"> <h1>DEEPAK GUPTA</h1><p>Front-end | Animator</p> </div>
-        <div id="nav_links_container"><div id="nlinks">WORK</div><div id="nlinks">ABOUT</div>
+        <div id="nav_links_container"><div id="nlinks" style="border-bottom: 2px solid rgba(30,215,96,1)">WORK</div><div id="nlinks">ABOUT</div>
             <div class="darkMode_btn" id="darkmodeBtn" onclick="DayNightSwitch()"><img src="vector/final/moon.png" class="MoonSun" id="MoonSunID"></div>
         </div>
         </div></div>
@@ -31,26 +35,60 @@
         <div id="box">
         
             
-            <div id="item_container" href="https://www.w3schools.com" target="_blank">
-                <div id="item_box" class="item_box item_1" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;">
-                <div id="item_content" style="background-image: url(items/rock_paper_scissor.jpg)">
-                    <div id="item_discription" class="item_discription item_disc_1"> <h2>Game: Rock Paper Scissor</h2><p>RPS Game with multiple inputs & Outputs</p><div>HTML, CSS, JAVASCRIPT</div></div>
+            <!--div id="item_container">
+                <div id="item_box" class="item_box item_1" >
+                <div id="item_content" class="item_content-1" style="background-image: url(items/rock_paper_scissor.jpg); cursor: pointer;" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;">
+                    <div id="item_discription" class="item_discription item_disc_1"> <h2>Game: Rock Paper Scissor</h2><p>RPS Game with multiple inputs & Outputs</p><div>
+            <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+            <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+            <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+          </div></div>
                     </div>
                 </div>   
                 </div>
          
              <div id="item_container" >
-                <div id="item_box item_box_2" class="item_box item_2" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;">
-                <div id="item_content" style="background-image: url(items/Oppenheimer.jpg)">
+                <div id="item_box item_box_2" class="item_box item_2" >
+                <div id="item_content" class="item_content-2" style="background-image: url(items/Oppenheimer.jpg); cursor: pointer;" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');" style="cursor: pointer;" >
                     <div id="item_discription" class="item_discription item_disc_2"> <h2>Blog: J. Robert Oppenheimer</h2><p>Highly stylized blog dedicated to Oppenheimer.</p><div>HTML, CSS, JAVASCRIPT</div></div>
                     </div>
                 </div>
+            </div-->
+            <div id="item_container" class="item-01">
+                <div class="image-container">
+             <img src="items/Oppenheimer.jpg" class="thumbnail">      
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Blog: J. Robert Oppenheimer</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
             </div>
-
-            
+                <div class="tech">
+        <p style="font-weight:normal;font-size: 14px;color: #959595;">HTML, CSS, Javascript
+                </div>
+                <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
         </div>
-        
-    </div>
+            
+            <div id="item_container" class="item-02">
+                <div class="image-container">
+             <img src="items/rock_paper_scissor.jpg" class="thumbnail" >
+                    
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Game: Rock Paper Scissor</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 4px;margin-bottom:2px;color: #808080;">RPS Game with multiple inputs & Outputs</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                 <div class="btn-container gitBtn-02">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');">Live</div> </div>
+        </div>
+            
+          
+            
+        </div></div>
     <script src="script.js"></script>
+        
     </body>
 </html>

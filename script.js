@@ -4,22 +4,26 @@ const itemDiscriptionBox = document.querySelectorAll(".item_discription");
 
 $(document).ready(function(){
 
-    if(window.innerWidth<800){
-        $(".item_disc_1").css("transform", "translate(0,0px)");
-        $(".item_disc_2").css("transform", "translate(0,0px)");
+    if(window.innerWidth<0){/*800*/
+       
+        
     }else{
-        $(".item_1").hover(function(){
-    $(".item_disc_1").css("transform", "translate(0,0px)");
+        $(".item-01").hover(function(){
+    $(this).css("background-color", "rgb(40,40,40)");
+      $(".gitBtn-01").css("opacity", "1"); 
+            
     }, function(){
-    $(".item_disc_1").css("transform", "translate(0,55px)");
-    
+    $(this).css("background-color", "rgb(20,20,20)");
+            $(".gitBtn-01").css("opacity", "0");
   });
     
-  $(".item_2").hover(function(){
+  $(".item-02").hover(function(){
       
-    $(".item_disc_2").css("transform", "translate(0,0px)");
+    $(this).css("background-color", "rgb(40,40,40)");
+     $(".gitBtn-02").css("opacity", "1"); 
     }, function(){
-    $(".item_disc_2").css("transform", "translate(0,55px)");
+    $(this).css("background-color", "rgb(20,20,20)");
+      $(".gitBtn-02").css("opacity", "0"); 
   });
     }
     
@@ -51,7 +55,7 @@ function DayNightSwitch(){
         MoonSunLogo.style.marginLeft = "55%";
         btn.style.backgroundImage = "url(vector/final/night_sky.jpg)"
         MoonSunLogo.src = "vector/final/moon.png"
-        btn.style.border = "2px solid grey";
+        btn.style.border = "2px solid rgb(30,30,30)";
         cssRoot.style.setProperty('--dark10', 'rgb(10,10,10)');
         cssRoot.style.setProperty('--dark20', 'rgb(20,20,20)');
         cssRoot.style.setProperty('--dark25', 'rgb(25,25,25)');
