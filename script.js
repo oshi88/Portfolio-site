@@ -1,6 +1,10 @@
-const itemBox = document.getElementById("item_box_1");
-const itemBox2 = document.getElementById("item_box_2");
-const itemDiscriptionBox = document.querySelectorAll(".item_discription");
+const scrollOutput = document.getElementById("scroll");
+const winHeight = window.innerHeight;
+let scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
 
 $(document).ready(function(){
 
@@ -68,4 +72,24 @@ function DayNightSwitch(){
     }
     
 }
-window.onload = DayNightSwitch();
+
+function aboutMe(){
+    var currentScroll = window.pageYOffset;
+    var scrollValue = currentScroll / (scrollHeight - winHeight);
+    var number = Math.round(scrollValue*100);
+   
+    var about = document.getElementById("aboutMe");
+    var arrow = document.getElementById("aboutArrow");
+    if(number>20){
+        about.style.transform = "translate(0,10%)";
+        about.style.borderBottom = "2px solid #808080";
+        arrow.style.display = "none";
+    }else{
+        about.style.transform = "translate(0,-150%)";
+        about.style.borderBottom = "0px solid #808080";
+        arrow.style.display = "block";
+    }
+}
+window.onscroll = function(){aboutMe();}
+window.onload = function(){DayNightSwitch();}
+

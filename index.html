@@ -24,18 +24,45 @@
 <body>
     <div class="nav_container">
     <div id="nav">
-        <div id="logo_container"> <h1>DEEPAK GUPTA</h1><p>Front-end | Animator</p> </div>
-        <div id="nav_links_container"><div id="nlinks" style="border-bottom: 2px solid rgba(30,215,96,1)">WORK</div><div id="nlinks">ABOUT</div>
+        <div id="logo_container"> <h1 style="">DG</h1> </div>
+        <div id="nav_links_container"><div id="nlinks" style="border-bottom: 2px solid rgba(30,215,96,1)">Home</div><div id="nlinks">About</div>
             <div class="darkMode_btn" id="darkmodeBtn" onclick="DayNightSwitch()"><img src="vector/final/moon.png" class="MoonSun" id="MoonSunID"></div>
         </div>
-        </div></div>
+        </div>
+        <!--p id="scroll" style="color: aquamarine;margin: auto;font-size: 30px">...</p-->
+    </div>
     
-    <div id="main-box">
-    
-        <div id="box">
+    <div id="main-box">    
         
-            
-           
+<section class="home">
+                <div class="name-title">
+                    <div style="display: flex;flex-direction: column;"><p style="color: rgb(30,215,96);font-family: roboto;font-size: 20px">Hello, My name is</p>
+                            <p style="color: aliceblue;font-family: roboto;font-weight: bold;font-size: 60px;margin-top: 5px">Deepak Gupta</p>
+                        <p style="color: grey;font-family: roboto;font-weight:normal;font-size: 20px; padding-top: 10px;padding-bottom: 10px;border-bottom: 1px solid grey">Front-end | UI Design | Animation</p>
+                    <p style="color: #808080;font-family: roboto;font-weight: normal;font-size: 20px;margin-top: 10px">I design and build websites creatively that look good, and work well.</p>
+                        <div id="work-btn"><p>SEE MY WORK</p></div>
+                    </div>   
+                </div>
+                <div class="profile-photo"><img src="vector/profile.jpg"></div>
+</section>
+
+        
+<section class="about">
+
+    <p id="aboutMe">About me
+    <img src="vector/icons/arrow-down.png" id="aboutArrow"></p>
+    
+    <p class="about-content">Hello, I'am Deepak and I'm a frontend developer, designer and teacher from Jabalpur, India.<br><br>
+        At age 15 i revived a nokia 1600 from the dead, That's when I knew I wanted to work with computers and technology, and I've never looked back. /s<br><br>
+After graduating with a Computer Application degree, I began freelancing as a designer, creating graphics & video content. After that I learnt javascript & started creating scripts for adobe after effects to automate animation tasks (It saved time & increased workflow speed). since then I kept learning and completely switched on to web development.<br><br>
+        In recent years, I've been focused on programming, building a solid frontend stack and creating exciting projects.<br><br>Take a look at my work below to see what I'm working on, and get in touch if you'd like to work together!
+    </p>
+    
+    </section>
+        
+        
+<section class="project">
+    <div id="box">
             <div id="item_container" class="item-01">
                 <div class="image-container">
              <img src="items/Oppenheimer.jpg" class="thumbnail">      
@@ -45,7 +72,9 @@
                 <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
             </div>
                 <div class="tech">
-        <p style="font-weight:normal;font-size: 14px;color: #959595;">HTML, CSS, Javascript
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
                 </div>
                 <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
         </div>
@@ -65,11 +94,12 @@
         <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
                 </div>
                  <div class="btn-container gitBtn-02">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');">Live</div> </div>
-        </div>
-            
+                </div>
+    </div>
+</section>
           
             
-        </div></div>
+        </div>
     <script src="script.js"></script>
         
     </body>
