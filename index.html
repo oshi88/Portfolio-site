@@ -25,8 +25,12 @@
     <div class="nav_container">
     <div id="nav">
         <div id="logo_container"> <h1 style="">DG</h1> </div>
-        <div id="nav_links_container"><div id="nlinks" style="border-bottom: 2px solid rgba(30,215,96,1)">Home</div><div id="nlinks">About</div>
-            <div class="darkMode_btn" id="darkmodeBtn" onclick="DayNightSwitch()"><img src="vector/final/moon.png" class="MoonSun" id="MoonSunID"></div>
+        <div id="nav_links_container">
+            <div class="nlinks" onclick="navScroller('home')" id="HomeNavLink" style="border-bottom: 2px solid rgba(30,215,96,1)" >Home</div>
+            <div class="nlinks" id="aboutNavLink" onclick="navScroller('about')">About</div>
+            <div class="nlinks" id="projectNavLink" onclick="navScroller('project')">Project</div>
+            
+            <div class="darkMode_btn" id="darkmodeBtn" onclick="DayNightSwitch()" style="display: none;"><img src="vector/final/moon.png" class="MoonSun" id="MoonSunID"></div>
         </div>
         </div>
         <!--p id="scroll" style="color: aquamarine;margin: auto;font-size: 30px">...</p-->
@@ -39,18 +43,18 @@
                     <div style="display: flex;flex-direction: column;"><p style="color: rgb(30,215,96);font-family: roboto;font-size: 20px">Hello, My name is</p>
                             <p style="color: aliceblue;font-family: roboto;font-weight: bold;font-size: 60px;margin-top: 5px">Deepak Gupta</p>
                         <p style="color: grey;font-family: roboto;font-weight:normal;font-size: 20px; padding-top: 10px;padding-bottom: 10px;border-bottom: 1px solid grey">Front-end | UI Design | Animation</p>
-                    <p style="color: #808080;font-family: roboto;font-weight: normal;font-size: 20px;margin-top: 10px">I design and build websites creatively that look good, and work well.</p>
-                        <div id="work-btn"><p>SEE MY WORK</p></div>
+                    <p style="color: #808080;font-family: roboto;font-weight: normal;font-size: 20px;margin-top: 10px">I design and build websites that look good, and work well.</p>
+                        <div id="work-btn" onclick="navScroller('project')"><p>SEE MY WORK</p></div>
                     </div>   
                 </div>
                 <div class="profile-photo"><img src="vector/profile.jpg"></div>
 </section>
 
         
-<section class="about">
+<section class="about" id="about-section">
 
-    <p id="aboutMe">About me
-    <img src="vector/icons/arrow-down.png" id="aboutArrow"></p>
+    <p id="aboutMe">ABOUT ME
+    <img src="vector/icons/arrow-down.png" id="aboutArrow" class="aboutDownArrow"></p>
     
     <p class="about-content">Hello, I'am Deepak and I'm a frontend developer, designer and teacher from Jabalpur, India.<br><br>
         At age 15 i revived a nokia 1600 from the dead, That's when I knew I wanted to work with computers and technology, and I've never looked back. /s<br><br>
@@ -59,10 +63,20 @@ After graduating with a Computer Application degree, I began freelancing as a de
     </p>
     
     </section>
+    
+<section class="skills-section">
+
         
+</section>        
         
-<section class="project">
-    <div id="box">
+<section class="project-section" id="project-section">
+    <div id="work-mode">
+        <div class="work-mode-container"><div><p id="webBtn" style="color: var(--spotify)">Web Development</p></div><div><p id="animationBtn">Animation</p></div></div>
+    </div>
+    
+ <div id="work-content">
+    
+     <div id="box">
             <div id="item_container" class="item-01">
                 <div class="image-container">
              <img src="items/Oppenheimer.jpg" class="thumbnail">      
@@ -95,7 +109,108 @@ After graduating with a Computer Application degree, I began freelancing as a de
                 </div>
                  <div class="btn-container gitBtn-02">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');">Live</div> </div>
                 </div>
+         <div id="item_container" class="item-01">
+                <div class="image-container">
+             <img src="items/Oppenheimer.jpg" class="thumbnail">      
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Blog: J. Robert Oppenheimer</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
+        </div>
+            
+            <div id="item_container" class="item-02">
+                <div class="image-container">
+             <img src="items/rock_paper_scissor.jpg" class="thumbnail" >
+                    
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Game: Rock Paper Scissor</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 4px;margin-bottom:2px;color: #808080;">RPS Game with multiple inputs & Outputs</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                 <div class="btn-container gitBtn-02">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');">Live</div> </div>
+                </div>
+         
     </div>
+    
+    <div id="animation-box">
+        <div id="item_container" class="item-01">
+                <div class="image-container">
+             <img src="items/Oppenheimer.jpg" class="thumbnail">      
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Blog: J. Robert Oppenheimer</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
+        </div>
+            
+            <div id="item_container" class="item-02">
+                <div class="image-container">
+             <img src="items/rock_paper_scissor.jpg" class="thumbnail" >
+                    
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Game: Rock Paper Scissor</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 4px;margin-bottom:2px;color: #808080;">RPS Game with multiple inputs & Outputs</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                 <div class="btn-container gitBtn-02">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Rock_Paper_Scissor/', '_blank');">Live</div> </div>
+                </div>
+         <div id="item_container" class="item-01">
+                <div class="image-container">
+             <img src="items/Oppenheimer.jpg" class="thumbnail">      
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Blog: J. Robert Oppenheimer</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
+        </div>
+         <div id="item_container" class="item-01">
+                <div class="image-container">
+             <img src="items/Oppenheimer.jpg" class="thumbnail">      
+                </div>
+            <div class="item-title">
+                <p style="font-weight: bold;font-size: 20px;">Blog: J. Robert Oppenheimer</p>
+                <p style="font-weight:normal;font-size: 15px;margin-top: 5px;color: #808080;">Highly stylized blog dedicated to Oppenheimer.</p>
+            </div>
+                <div class="tech">
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />           
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />     
+        <img class="icons-lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="margin-left: 4px"/>
+                </div>
+                <div class="btn-container gitBtn-01">  <div class="git-btn" onclick="window.open('https://oshi88.github.io/Oppenheimers-Blog/', '_blank');">Live</div> </div>
+        </div>
+        
+    </div>
+    </div>
+    
 </section>
           
             
