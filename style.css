@@ -28,7 +28,7 @@ font-family: 'Passions Conflict', cursive;*/
     display: flex;
     background-color: var(--dark10);
     border-bottom: 1px solid var(--white);  
-    position: fixed;
+    position:fixed;
     z-index: 1;
 }
 #nav{
@@ -45,6 +45,7 @@ font-family: 'Passions Conflict', cursive;*/
         width: 100%;
     }
 }
+
 .darkMode_btn{
     width: 80px;
     height: 35px;
@@ -84,7 +85,7 @@ font-family: 'Passions Conflict', cursive;*/
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 20px;
+    margin-left: 115px;
 }
 @media only screen and (max-width: 900px){
     #logo_container{
@@ -138,8 +139,8 @@ h2{
     #nav_links_container{  
         justify-content: space-evenly;
         padding: 5px;
-        border-top: 1px solid white;
-        background-color: var(--dark25);
+        border-top: 1px solid grey;
+        background-color: rgb(10,20,30);
     }
 }
 
@@ -186,8 +187,7 @@ h2{
     height: 100vh;
     padding-top: 20px;
     margin: auto;
-    justify-content: space-evenly;
-    
+    justify-content: space-evenly; 
     background: rgb(10,20,30);
     background: -moz-linear-gradient(180deg, rgba(10,20,30,1) 0%, rgba(20,20,20,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(10,20,30,1) 0%, rgba(20,20,20,1) 100%);

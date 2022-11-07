@@ -2,19 +2,27 @@ const scrollOutput = document.getElementById("scroll");
 const winHeight = window.innerHeight;
 let scrollheight;
 
-window.onscroll = function(){aboutMe();}
+window.onscroll = function(){aboutMe();isInViewport();navCustomisation()}
 window.onload = function(){DayNightSwitch();currentViewHeight()}
 
 /*window.addEventListener('resize',)*/
 function currentViewHeight(){  
     scrollHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
 );
 }
 
-
+function navCustomisation(){
+    var scroll = scroller();
+    var nav = document.getElementById('nav');
+    if(scroll>=4){
+        nav.style.height = '5vh';
+    }else{
+        nav.style.height = '10vh';
+    }
+}
 
 
 $(document).ready(function(){
@@ -40,12 +48,16 @@ $(document).ready(function(){
     $(this).css("background-color", "rgb(20,20,20)");
       $(".gitBtn-02").css("opacity", "0"); 
   });
-    }
-    
-  
-        
+    }     
     
   });
+
+function scroller(){
+    var currentScroll = window.pageYOffset;
+    var scrollValue = currentScroll / (scrollHeight - winHeight);
+    var number = Math.round(scrollValue*100);
+    return number;
+}
 
 function DayNightSwitch(){
     btn = document.getElementById("darkmodeBtn");
@@ -81,20 +93,17 @@ function DayNightSwitch(){
 }
 
 function aboutMe(){
-    
-    var currentScroll = window.pageYOffset;
-    var scrollValue = currentScroll / (scrollHeight - winHeight);
-    var number = Math.round(scrollValue*100);
-   /* document.getElementById("scroll").innerHTML = number;*/
+    var scroll = scroller();
+    var nav = document.getElementById("nav");
     var about = document.getElementById("aboutMe");
     var arrow = document.getElementById("aboutArrow");
-    if(number>20){
+    if(scroll>20){
         about.style.transform = "translate(0,10%)";
-        about.style.borderBottom = "2px solid #808080";
+        /*about.style.borderBottom = "2px solid #808080";*/
         arrow.style.display = "none";
     }else{
         about.style.transform = "translate(0,-150%)";
-        about.style.borderBottom = "0px solid #808080";
+        /*about.style.borderBottom = "0px solid #808080";*/
         arrow.style.display = "block";
     }
 }
@@ -136,22 +145,45 @@ const aboutSection = document.getElementById('about-section');
 const projectSection = document.getElementById('project-section');
 
 function navScroller(e){
-    var currentScroll = window.pageYOffset;
-    var scrollValue = currentScroll / (scrollHeight - winHeight);
-    var number = Math.round(scrollValue*100);
+    var scroll = scroller();
+    navBorderClear();
     
-    navHome.style = 'border-bottom: 2px solid rgba(30,215,96,0)';
-    navAbout.style = 'border-bottom: 2px solid rgba(30,215,96,0)';
-    navProject.style = 'border-bottom: 2px solid rgba(30,215,96,0)';
     if(e === 'about'){
         aboutSection.scrollIntoView(false);
-        navAbout.style = 'border-bottom: 2px solid rgba(30,215,96,1)'
+        navAbout.style = 'color: rgba(30,215,96,1)'
     }else if(e === 'project'){
-        navProject.style = 'border-bottom: 2px solid rgba(30,215,96,1)';
+        navProject.style = 'color: rgba(30,215,96,1)';
         projectSection.scrollIntoView({block: "start"}); 
-    }else if(e==='home'){
+    }else if(e === 'home'){
         window.scrollTo(0, 0);
-        navHome.style = 'border-bottom: 2px solid rgba(30,215,96,1)';
+        navHome.style = 'color: rgba(30,215,96,1)';
     }
-    
 }
+
+function navBorderClear(){
+    navHome.style = 'color: white';
+    navAbout.style = 'color:white';
+    navProject.style = 'color: white';
+}
+
+/*function isInViewport(){
+    const aboutRect = aboutSection.getBoundingClientRect();
+    const projectRect = projectSection.getBoundingClientRect();
+    navBorderClear();
+    const aboutCheck = aboutRect.top >= 0 &&
+        aboutRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) ;
+    
+    const projectCheck = projectRect.top >= 0 &&
+        projectRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) ;
+    
+    
+    if(aboutCheck === true){
+        navAbout.style = 'color: rgba(30,215,96,1)'
+    }else if(projectCheck === true){
+        navProject.style = 'color: rgba(30,215,96,1)'
+        console.log('project section check')
+    }else{
+        navHome.style = 'color: rgba(30,215,96,1)'
+    }
+}  */
+
