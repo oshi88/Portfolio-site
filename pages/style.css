@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-family: roboto;
+    line-height: 1.2;
+}
+mark{
+    background-color: black;
+    color: white;
+    font-weight:bold ;
+}
+
+.close{
+    width: 30px;
+    position: fixed;
+    padding: 2px;
+    right: 0;
+}
+.ytwindow{
+    width: 80%;
+    margin-bottom: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+iframe{
+    width="560px";
+}
+.discription{
+    color: aliceblue;
+    width: 60%;
+    text-align: center;
+}
+.bts{
+    width: 80%;
+    
+}
